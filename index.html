@@ -54,7 +54,7 @@
         >
           <a href="#" class="btn btn-ghost">About</a>
           <a href="#" class="btn btn-ghost">Experience</a>
-          <a href="#" class="btn btn-ghost">Projects</a>
+          <a href="#" class="btn btn-ghost">Portfolio</a>
           <a href="#" class="btn btn-ghost">Skills</a>
           <a href="#" class="btn btn-ghost">Contact</a>
         </nav>
@@ -169,15 +169,15 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Portfolio Section -->
     <section class="w-full px-4 py-16 bg-base-200">
       <div class="mx-auto max-w-screen-xl lg:w-4/5">
-        <h1 class="text-4xl font-semibold sm:text-6xl">Projects</h1>
+        <h1 class="text-4xl font-semibold sm:text-6xl">Portfolio</h1>
         <div
           x-data
           class="grid grid-cols-1 gap-8 pt-6 sm:grid-cols-2 lg:grid-cols-3"
         >
-          <template x-for="project in $store.data.projects" :key="project.id">
+          <template x-for="project in $store.data.portfolio" :key="project.id">
             <div
               class="flex flex-col justify-between w-full rounded-md overflow-hidden group shadow-sm hover:-translate-y-1 duration-300 ease-in-out hover:shadow-md"
             >

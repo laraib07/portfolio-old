@@ -3,7 +3,7 @@ import Alpine from "alpinejs";
 window.Alpine = Alpine;
 
 Alpine.store("data", {
-  projects: [
+  portfolio: [
     {
       id: 1,
       title: "Project name",
