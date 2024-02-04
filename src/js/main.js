@@ -47,11 +47,14 @@ Alpine.store("data", {
   ],
 
   skills: [
-    { title: 'Frontend', skills: ["skill1", "skill2", "longSkillName"]},
-    { title: 'Backend', skills: ["skill1", "skill2", "longSkillName"]},
-    { title: 'Fullstack', skills: ["skill1", "skill2", "longSkillName"]},
-    { title: 'Tools & Platforms', skills: ["skill1", "skill2", "longSkillName"]},
-    { title: 'Database', skills: ["skill1", "skill2", "longSkillName"]},
+    { title: "Frontend", skills: ["skill1", "skill2", "longSkillName"] },
+    { title: "Backend", skills: ["skill1", "skill2", "longSkillName"] },
+    { title: "Fullstack", skills: ["skill1", "skill2", "longSkillName"] },
+    {
+      title: "Tools & Platforms",
+      skills: ["skill1", "skill2", "longSkillName"],
+    },
+    { title: "Database", skills: ["skill1", "skill2", "longSkillName"] },
   ],
 });
 
