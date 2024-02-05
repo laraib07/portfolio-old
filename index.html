@@ -19,11 +19,19 @@
         class="flex flex-col max-w-screen-xl mx-auto lg:items-center lg:flex-row"
       >
         <div class="flex flex-row flex-1 justify-between items-center">
-          <div class="flex-1 text-3xl font-semibold">A. Laraib</div>
+          <div class="flex-1 text-3xl font-bold">
+            <a href="#hero">
+              Laraib<em class="text-primary font-black">07</em>
+            </a>
+          </div>
           <div>
-            <button class="btn btn-outline border-2 mx-4 lg:hidden">
+            <a
+              href="https://drive.google.com/file/d/1t-26eoFVKY5th9wjLxw7kVQpQv7D_arg/view?usp=share_link"
+              target="_blank"
+              class="btn btn-primary border-2 mr-2 lg:hidden"
+            >
               Resume
-            </button>
+            </a>
             <button class="lg:hidden" @click="open = !open">
               <svg
                 height="64"
@@ -62,7 +70,7 @@
         <a
           href="https://drive.google.com/file/d/1t-26eoFVKY5th9wjLxw7kVQpQv7D_arg/view?usp=share_link"
           target="_blank"
-          class="hidden btn btn-outline border-2 ml-2 lg:flex"
+          class="hidden btn btn-primary border-2 ml-2 lg:flex"
         >
           Resume
         </a>
