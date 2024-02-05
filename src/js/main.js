@@ -9,7 +9,7 @@ Alpine.store("data", {
       title: "Project name",
       skills: ["skill1", "skill2", "skill3"],
       desc: "Lorem ipsum hello world this is a long text so bear with me Lorem, ipsum dolor sit amet consectetur adipisicing elit. veniam eos, maiores doloribus cumque amet, nostrum quam minima neque suscipit numquam repellat possimus.",
-      gitlink: "gitlink",
+      gitlink: null,
       demo: "demolink",
     },
     {
@@ -26,7 +26,7 @@ Alpine.store("data", {
       skills: ["skill1", "skill2", "skill3"],
       desc: "Lorem ipsum",
       gitlink: "gitlink",
-      demo: "null",
+      demo: null,
     },
     {
       id: 4,
