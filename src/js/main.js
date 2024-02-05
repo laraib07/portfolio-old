@@ -3,6 +3,9 @@ import Alpine from "alpinejs";
 window.Alpine = Alpine;
 
 Alpine.store("data", {
+  resume:
+    "https://drive.google.com/file/d/1t-26eoFVKY5th9wjLxw7kVQpQv7D_arg/view?usp=share_link",
+
   portfolio: [
     {
       id: 1,
