@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Larab07 | Portfolio</title>
     <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <script defer type="module" src="src/js/main.js"></script>
   </head>
   <body>
     <!-- Navbar -->
     <header
       x-data="{ open: false, atTop: true }"
-      :class="{ 'backdrop-blur duration-150 shadow-sm': !atTop | open }"
+      :class="{ 'backdrop-blur bg-base-100/30 duration-150 shadow-sm': !atTop | open }"
       class="fixed top-0 right-0 left-0 px-4 py-2 z-50"
       @scroll.window="atTop = (window.pageYOffset < 10) ? true: false"
     >
