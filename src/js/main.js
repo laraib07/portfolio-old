@@ -59,3 +59,21 @@ Alpine.store("data", {
 });
 
 Alpine.start();
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwXUgR5YZrNhcEOG_6kdnsPI31AKnChShSLr9NVvbS_bQz7VGyXl666BPGTj7EQMQl_ag/exec";
+const form = document.forms["submit-to-google-sheet"];
+const alert = document.getElementById("alert");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      alert.innerHTML = "Message sent successfully!";
+      setTimeout(function () {
+        alert.innerHTML = "";
+      }, 5000);
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});

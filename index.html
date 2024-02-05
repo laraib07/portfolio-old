@@ -285,26 +285,32 @@
               expedita corrupti. Saepe, eius aliquam?
             </p>
           </div>
-          <div class="w-full md:w-1/2">
-            <form class="flex flex-col space-y-4 p-8 bg-base-100 rounded-md">
+          <div class="flex flex-col w-full md:w-1/2">
+            <form
+              name="submit-to-google-sheet"
+              class="flex flex-col space-y-4 p-8 bg-base-100 rounded-md"
+            >
               <input
                 type="text"
                 placeholder="Full Name"
+                name="Name"
                 class="input input-bordered w-full"
               />
               <input
                 type="email"
                 placeholder="Email"
+                name="Email"
                 class="input input-bordered w-full"
               />
               <textarea
-                name="message"
                 placeholder="Write you message..."
                 rows="4"
+                name="Message"
                 class="textarea textarea-bordered text-base"
               ></textarea>
               <button class="btn btn-primary w-full">Submit</button>
             </form>
+            <span id="alert" class="text-success text-center p-4"></span>
           </div>
         </div>
       </div>
