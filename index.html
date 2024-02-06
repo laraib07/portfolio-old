@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Larab07 | Portfolio</title>
+    <title>Laraib07 | Portfolio</title>
     <link rel="stylesheet" href="src/css/index.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <script defer type="module" src="src/js/main.js"></script>
@@ -22,8 +22,7 @@
         <div class="flex flex-row flex-1 justify-between items-center">
           <div class="flex-1 text-3xl font-bold">
             <a href="#hero">
-              Laraib<em class="text-neutral font-black">07</em>
-              <em class="text-primary -ml-12 font-black">07</em>
+              Laraib<em class="text-primary font-black">07</em>
             </a>
           </div>
           <div>
@@ -61,6 +60,7 @@
         <nav
           :class="{ 'flex': open, 'hidden': !open }"
           class="flex-col lg:flex lg:flex-row lg:items-center"
+          @click="open = !open"
         >
           <a href="#about" class="btn btn-ghost">About</a>
           <a href="#experience" class="btn btn-ghost">Experience</a>
