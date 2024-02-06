@@ -4,7 +4,7 @@ window.Alpine = Alpine;
 
 Alpine.store("data", {
   resume:
-    "https://drive.google.com/file/d/1t-26eoFVKY5th9wjLxw7kVQpQv7D_arg/view?usp=share_link",
+    "https://drive.google.com/file/d/1s4FQ75wJZ37tTOYyg-aeyqrksg2JBp5g/view?usp=share_link",
 
   portfolio: [
     {
