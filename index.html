@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Larab07 | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script type="module" crossorigin src="/assets/index-4SaY7G7C.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-xz9t9GNL.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header
+      x-data="{ open: false, atTop: true }"
+      :class="{ 'backdrop-blur bg-base-100/30 duration-150 shadow-sm': !atTop | open }"
+      class="fixed top-0 right-0 left-0 px-4 py-2 z-50"
+      @scroll.window="atTop = (window.pageYOffset < 10) ? true: false"
+    >
+      <div
+        class="flex flex-col max-w-screen-xl mx-auto lg:items-center lg:flex-row"
+      >
+        <div class="flex flex-row flex-1 justify-between items-center">
+          <div class="flex-1 text-3xl font-bold">
+            <a href="#hero">
+              Laraib<em class="text-neutral font-black">07</em>
+              <em class="text-primary -ml-12 font-black">07</em>
+            </a>
+          </div>
+          <div>
+            <a
+              :href="$store.data.resume"
+              target="_blank"
+              class="btn btn-primary border-2 mr-2 lg:hidden"
+            >
+              Resume
+            </a>
+            <button class="lg:hidden" @click="open = !open">
+              <svg
+                height="64"
+                width="64"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                class="w-6 h-6"
+              >
+                <path
+                  x-show="!open"
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  x-show="open"
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <nav
+          :class="{ 'flex': open, 'hidden': !open }"
+          class="flex-col lg:flex lg:flex-row lg:items-center"
+        >
+          <a href="#about" class="btn btn-ghost">About</a>
+          <a href="#experience" class="btn btn-ghost">Experience</a>
+          <a href="#portfolio" class="btn btn-ghost">Portfolio</a>
+          <a href="#skills" class="btn btn-ghost">Skills</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
+        </nav>
+
+        <a
+          :href="$store.data.resume"
+          target="_blank"
+          class="hidden btn btn-primary border-2 ml-2 lg:flex"
+        >
+          Resume
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="w-full min-h-screen px-4 bg-base-100">
+      <div class="flex flex-row items-center max-w-screen-xl h-screen mx-auto">
+        <div class="md:w-1/2">
+          <h2 class="text-xl">Fullstack Developer</h2>
+          <h1 class="text-6xl font-bold">Hi, I am Laraib.</h1>
+          <div class="pt-4">
+            <a href="#portfolio" class="btn btn-primary">Portfolio</a>
+            <a href="#contact" class="btn btn-outline border-2 ml-4">Contact</a>
+          </div>
+        </div>
+        <div class="hidden items-center pt-16 md:block">
+          <img
+            src="/images/hero.webp"
+            alt="hero image"
+            class="object-contain h-screen py-20 mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="w-full px-4 py-16 bg-base-200">
+      <div class="flex flex-col mx-auto max-w-screen-xl lg:flex-row lg:w-4/5">
+        <div
+          class="w-full max-h-[400px] bg-neutral-700 rounded-lg overflow-hidden lg:w-1/2"
+        >
+          <img src="/images/my_image.webp" alt="Laraib's image" />
+        </div>
+        <div class="w-full pt-8 lg:w-1/2 lg:pl-8">
+          <h1 class="text-4xl font-semibold sm:text-6xl">About Me</h1>
+          <p class="pt-6">
+            Web developer specializing in full-stack development using Laravel,
+            Django, MERN, HTML, CSS, JavaScript, and Hugo. Committed to crafting
+            seamless and user-centric web experiences. Let's transform ideas
+            into code and build something extraordinary together!
+          </p>
+          <div class="flex gap-4 items-center pt-6">
+            <!-- Github  -->
+            <a
+              href="https://github.com/laraib07"
+              target="_blank"
+              class="ease-in-out duration-300 hover:scale-110"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+            <!-- Linkedin -->
+            <a
+              href="https://www.linkedin.com/in/laraib07/"
+              target="_blank"
+              class="ease-in-out duration-300 hover:scale-110"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="54"
+                height="54"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
+                />
+              </svg>
+            </a>
+            <!-- Leetcode -->
+            <a
+              href="https://leetcode.com/laraib07/"
+              target="_blank"
+              class="ease-in-out duration-300 hover:scale-110"
+            >
+              <svg
+                fill="currentColor"
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="w-full px-4 py-16 bg-base-300">
+      <div class="flex flex-col mx-auto max-w-screen-xl lg:flex-row lg:w-4/5">
+        <h1 class="inline text-4xl font-semibold sm:text-6xl pr-8">
+          Experience
+        </h1>
+        <div class="flex flex-col pl-2 pt-6 lg:pl-8 lg:w-3/4 lg:pt-0">
+          <div class="space-y-6">
+            <div class="relative w-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-base-content"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <h4 class="font-bold text-base-content pl-6">
+                Fullstack Developer | Freelancing
+              </h4>
+
+              <div class="pl-6 border-l-2 border-dashed border-base-content">
+                <p class="pt-2 text-sm text-base-content">
+                  Developed and implemented robust websites for businesses using
+                  PHP for backend logic, Laravel for efficient framework
+                  structuring, and Blade Template for streamlined front-end
+                  design. Ensured code integrity and scalability for optimal
+                  website performance.
+                </p>
+                <span class="mt-1 block text-sm font-semibold text-base-content"
+                  >2023 - current
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="w-full px-4 py-16 bg-base-200">
+      <div class="mx-auto max-w-screen-xl lg:w-4/5">
+        <h1 class="text-4xl font-semibold sm:text-6xl">Portfolio</h1>
+        <div
+          x-data
+          class="grid grid-cols-1 gap-8 pt-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <template x-for="project in $store.data.portfolio" :key="project.id">
+            <div
+              class="flex flex-col w-full rounded-md overflow-hidden group bg-base-100 shadow-sm duration-500 ease-in-out hover:shadow-lg"
+            >
+              <div class="w-full h-[150px] overflow-hidden">
+                <img
+                  :src="project.imgsrc"
+                  alt="project.title"
+                  class="object-fit ease-in-out duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div class="p-4 grow">
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <template x-for="skill in project.skills">
+                    <span
+                      class="border border-base-content rounded-full py-1 px-2"
+                      x-text="skill"
+                    ></span>
+                  </template>
+                </div>
+                <h2
+                  class="font-medium text-2xl py-2"
+                  x-text="project.title"
+                ></h2>
+                <p class="text-sm" x-text="project.desc"></p>
+              </div>
+              <div class="items-start bg-base-300 w-full px-4 py-8">
+                <div class="relative flex items-center bg-base-300 w-full">
+                  <a
+                    :href="project.gitlink"
+                    target="_blank"
+                    x-show="project.gitlink != null"
+                    class="absolute left-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-github"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    :href="project.demo"
+                    target="_blank"
+                    x-show="project.demo != null"
+                    class="btn btn-outline btn-sm absolute right-0"
+                  >
+                    Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <div class="flex items-center justify-center">
+            <a href="#" class="btn btn-outline border-2 group">
+              See more
+              <span class="inline-block duration-200 group-hover:translate-x-2"
+                >&nbsp;&#10230;
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="w-full px-4 py-16 bg-base-300">
+      <div x-data class="mx-auto max-w-screen-xl lg:w-4/5">
+        <h1 class="text-4xl font-semibold sm:text-6xl">Skills</h1>
+
+        <template x-for="skill in $store.data.skills" :key="skill.title">
+          <div class="pt-6">
+            <h2 class="text-2xl font-medium" x-text="skill.title"></h2>
+            <div class="flex flex-wrap gap-2 pt-4">
+              <template x-for="skillName in skill.skills">
+                <span
+                  class="btn btn-outline btn-sm border-2"
+                  x-text="skillName"
+                ></span>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="w-full px-4 py-16 bg-base-200">
+      <div class="mx-auto max-w-screen-xl lg:w-4/5">
+        <h1 class="text-4xl font-semibold sm:text-6xl">Contact</h1>
+        <div class="flex flex-col pt-6 gap-8 md:flex-row">
+          <div class="w-full md:w-1/2">
+            <p>
+              Feel free to drop me a message! Whether you have a project in mind
+              or just want to say hello, I'm all ears. I look forward to
+              connecting with you and exploring how we can collaborate on
+              something amazing!
+            </p>
+          </div>
+          <div class="flex flex-col w-full md:w-1/2">
+            <form
+              name="submit-to-google-sheet"
+              class="flex flex-col space-y-4 p-8 bg-base-100 rounded-md"
+            >
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="Name"
+                class="input input-bordered w-full"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                name="Email"
+                class="input input-bordered w-full"
+              />
+              <textarea
+                placeholder="Write you message..."
+                rows="4"
+                name="Message"
+                class="textarea textarea-bordered text-base"
+              ></textarea>
+              <button class="btn btn-primary w-full">Submit</button>
+            </form>
+            <span id="alert" class="text-success text-center p-4"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-base-300 py-4">
+      <div class="text-sm text-center">Made with &hearts; by Laraib07</div>
+    </footer>
+  </body>
+</html>
