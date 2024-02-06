@@ -61,6 +61,7 @@
         <nav
           :class="{ 'flex': open, 'hidden': !open }"
           class="flex-col lg:flex lg:flex-row lg:items-center"
+          @click="open = !open"
         >
           <a href="#about" class="btn btn-ghost">About</a>
           <a href="#experience" class="btn btn-ghost">Experience</a>
