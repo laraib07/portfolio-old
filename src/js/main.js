@@ -12,7 +12,7 @@ Alpine.store("data", {
       title: "Leomir Hotel",
       skills: ["Laravel", "PHP", "HTML", "TailwindCSS"],
       imgsrc: "./images/portfolio/leomir.webp",
-      desc: "Discover the charm of Leomir Hotel on the website I created. Immerse yourself in the inviting ambiance, explore amenities, and plan your stay effortlessly. ",
+      desc: "Discover the charm of Leomir Hotel on the website I created at cloudinators on contract basis. Immerse yourself in the inviting ambiance, explore amenities, and plan your stay effortlessly. ",
       gitlink: null,
       demo: "https://leomirhotel.com",
     },
