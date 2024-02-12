@@ -71,6 +71,66 @@ Alpine.store("data", {
 
 Alpine.start();
 
+// Header
+const header = document.querySelector("header");
+const navbar = document.querySelector("nav");
+const drawer = document.querySelector("#drawer");
+const logo = document.querySelector("#brandlogo");
+
+const drawerState = {
+  open: false,
+  onTap: function () {
+    this.open = !this.open;
+    this.updateUI();
+  },
+  updateUI: function () {
+    const drawerOpen = drawer.firstElementChild.firstElementChild;
+    const drawerClose = drawer.firstElementChild.lastElementChild;
+
+    drawerOpen.classList.toggle("hidden");
+    drawerClose.classList.toggle("hidden");
+    navbar.classList.toggle("hidden");
+  },
+};
+drawer.addEventListener("click", () => drawerState.onTap());
+
+// Hide navbar in small screen
+if (window.innerWidth < 1024) {
+  navbar.classList.add("hidden");
+}
+
+const scrollState = {
+  top: true,
+  onScroll: function () {
+    if (this.top && window.scrollY > 10) {
+      this.top = false;
+      this.updateUI();
+    } else if (!this.top && window.scrollY <= 10) {
+      this.top = true;
+      this.updateUI();
+    }
+  },
+  updateUI: function () {
+    header.classList.toggle("shadow-sm");
+  },
+};
+window.addEventListener("scroll", () => scrollState.onScroll());
+
+logo.addEventListener("click", (e) => {
+  window.scroll(0, 0);
+});
+
+navbar.addEventListener("click", (e) => {
+  const name = e.target.getAttribute("name");
+  const section = document.getElementById(name);
+  section.scrollIntoView();
+
+  if (window.innerWidth < 1024) {
+    drawerState.onTap();
+  }
+});
+
+// Contact Form
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwXUgR5YZrNhcEOG_6kdnsPI31AKnChShSLr9NVvbS_bQz7VGyXl666BPGTj7EQMQl_ag/exec";
 const form = document.forms["submit-to-google-sheet"];

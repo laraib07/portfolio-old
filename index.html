@@ -10,11 +10,10 @@
   </head>
   <body>
     <!-- Navbar -->
+    <!-- x-data needed for store to work properly. Will be removed in future updates -->
     <header
-      x-data="{ open: false, atTop: true }"
-      :class="{ 'backdrop-blur bg-base-100/30 duration-150 shadow-sm': !atTop | open }"
-      class="fixed top-0 right-0 left-0 px-4 py-2 z-50"
-      @scroll.window="atTop = (window.pageYOffset < 10) ? true: false"
+      x-data
+      class="fixed top-0 right-0 left-0 px-4 py-2 backdrop-blur bg-base-100/30 z-50"
     >
       <div
         class="flex flex-col max-w-screen-xl mx-auto lg:items-center lg:flex-row"
@@ -22,7 +21,7 @@
         <div class="flex flex-row flex-1 justify-between items-center">
           <div class="flex-1 text-3xl font-bold">
             <!-- Brand logo -->
-            <a href="#hero" class="flex">
+            <button id="brandlogo" class="flex">
               Laraib
               <div class="relative">
                 <em class="absolute left-1 text-neutral font-black -z-10"
@@ -30,7 +29,7 @@
                 >
                 <em class="text-primary font-black">07</em>
               </div>
-            </a>
+            </button>
           </div>
           <div>
             <a
@@ -40,7 +39,7 @@
             >
               Resume
             </a>
-            <button class="lg:hidden" @click="open = !open">
+            <button id="drawer" class="lg:hidden">
               <svg
                 height="64"
                 width="64"
@@ -49,13 +48,13 @@
                 class="w-6 h-6"
               >
                 <path
-                  x-show="!open"
+                  class="block"
                   fill-rule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
                   clip-rule="evenodd"
                 ></path>
                 <path
-                  x-show="open"
+                  class="hidden"
                   fill-rule="evenodd"
                   d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                   clip-rule="evenodd"
@@ -64,16 +63,12 @@
             </button>
           </div>
         </div>
-        <nav
-          :class="{ 'flex': open, 'hidden': !open }"
-          class="flex-col lg:flex lg:flex-row lg:items-center"
-          @click="open = !open"
-        >
-          <a href="#about" class="btn btn-ghost">About</a>
-          <a href="#experience" class="btn btn-ghost">Experience</a>
-          <a href="#portfolio" class="btn btn-ghost">Portfolio</a>
-          <a href="#skills" class="btn btn-ghost">Skills</a>
-          <a href="#contact" class="btn btn-ghost">Contact</a>
+        <nav class="flex flex-col lg:flex lg:flex-row lg:items-center">
+          <button name="about" class="btn btn-ghost">About</button>
+          <button name="experience" class="btn btn-ghost">Experience</button>
+          <button name="portfolio" class="btn btn-ghost">Portfolio</button>
+          <button name="skills" class="btn btn-ghost">Skills</button>
+          <button name="contact" class="btn btn-ghost">Contact</button>
         </nav>
 
         <a
