@@ -71,6 +71,13 @@ Alpine.store("data", {
 
 Alpine.start();
 
+function scrollSectionIntoView(e) {
+  e.stopPropagation();
+  const name = e.target.getAttribute("name");
+  const section = document.getElementById(name);
+  section.scrollIntoView();
+}
+
 // Header
 const header = document.querySelector("header");
 const navbar = document.querySelector("nav");
@@ -121,14 +128,16 @@ logo.addEventListener("click", (e) => {
 });
 
 navbar.addEventListener("click", (e) => {
-  const name = e.target.getAttribute("name");
-  const section = document.getElementById(name);
-  section.scrollIntoView();
+  scrollSectionIntoView(e);
 
   if (window.innerWidth < 1024) {
     drawerState.onTap();
   }
 });
+
+// Hero section
+const heroCTA = document.querySelector("#hero_cta");
+heroCTA.addEventListener("click", (e) => scrollSectionIntoView(e));
 
 // Contact Form
 const scriptURL =
