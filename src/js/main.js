@@ -1,3 +1,10 @@
+/**
+ * TODO:
+ *  1. Replace alpine with vanilla JS
+ *  2. Defer image loading
+ *  3. Only load event listeners when it is needed.
+ */
+
 import Alpine from "alpinejs";
 
 window.Alpine = Alpine;
