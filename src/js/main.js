@@ -59,8 +59,7 @@ Alpine.store("data", {
       title: "Frontend",
       skills: ["HTML", "CSS", "Javascript", "TailwindCSS", "Bootstrap"],
     },
-    { title: "Backend", skills: ["NodeJS", "Express"] },
-    { title: "Fullstack", skills: ["Laravel", "Django"] },
+    { title: "Backend", skills: ["NodeJS", "Express", "Laravel", "Django"] },
     {
       title: "Tools & Platforms",
       skills: ["Git", "Github", "Linux", "Vercel", "Hostinger", "Firebase"],
